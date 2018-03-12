@@ -1,8 +1,6 @@
 import java.sql.*;
 
 public class MainApp {
-
-
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
         Class.forName("org.postgresql.Driver");
@@ -17,10 +15,9 @@ public class MainApp {
         int n = 1;
         while (resultSet.next()) {
             String col;
-            for (int i =1;i<=15;i++)
-            {
-            col = resultSet.getString(i);
-            System.out.print(col + " ");
+            for (int i = 1; i <= 15; i++) {
+                col = resultSet.getString(i);
+                System.out.print(col + " ");
             }
             System.out.println();
         }
